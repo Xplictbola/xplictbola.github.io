@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <style>
+   /* universal */
+  * {
+      box-sizing: border-box;
+  }
+   /*body*/
+  body{
+      margin: 0;
+      font-family: lato;
+  }
+   /*first row styling*/
+   /*Navbar styling*/
+  div.nav-bar{
+      background-color: #000000;
+      color: #F9F9F9;
+      position: sticky; top: 0;
+}
+  div.nav-bar li{
+      display: inline-block;
+      padding: 15px 20px;
+  }
+  div.nav-bar li a{
+      color: #F9F9F9;
+      text-decoration: none;
+
+  }
+  div.nav-bar li:hover a{
+        color: #000000;
+        padding: 15px;
+  }
+  /*leftbar hovering style*/
+   div.leftbar li:hover{
+       background-color: #CBCBCB;
+       padding: 15px 10px;
+       cursor: pointer;
+   }
+   /*righbar hovering style*/
+   div.rightbar li:hover{
+       background-color: red;
+       padding: 15px;
+       cursor: pointer;
+   }
+
+
+    .dropdown{
+      position: relative;
+      display: inline-block;
+  }
+
+  .drop_content{
+      position: absolute;
+      margin: 15px 0 0 -10px;
+      display: none;
+  }
+  .dropdown:hover .drop_content{
+      display: block;
+  }
+
+  .drop_content a{
+      display: block;
+      background-color: White;
+      padding: 5px 60px 10px 15px;
+      box-shadow: 1px 1px 1px #808080;
+      font-size: 14.4px
+  }
+  .drop_content a:hover{
+      background-color: #CBCBCB;
+  }
+
+
+  ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  /*right navbar*/
+
+
+  .clear{/*to clear the float of the navbar*/
+      clear: both;
+  }
+  /*first row styling*/
+  .cont .img{ position: relative;}
+  .cont .bottomimage{
+      position: absolute;
+      color: white;
+      top: 100%;
+      left: 40%;
+  }
+
+  /*second row style the band*/
+  div#row2{
+      margin: auto;
+      width: 60%;
+  }
+  .bandmembers div{
+      float: left;
+      width: 33.33%;
+      text-align: center;
+
+  }
+  /*third row style tour*/
+  div#row3{
+      background-color: #000000;
+      color: #FFFFFF;
+      margin-top: 70px
+  }
+
+  div#row3 .tour{
+      margin: auto;
+      width: 60%;
+      padding: 70px 0;
+
+  }
+  .city{
+      float: left;
+      width: 32%;
+      background-color: #FFFFFF;
+      color: #000000;
+  }
+  .city img:hover{
+      opacity: 0.8;
+  }
+  .city .btn{
+      background-color: #000000;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 15px;
+      font-size: 15px
+  }
+  .city .btn:hover{
+      cursor: pointer;
+      background-color: #CBCBCB;
+      color: #000000;
+  }
+
+  .date{
+      background-color: #FFFFFF;
+      color: #000000;
+
+  }
+  .date p{
+      padding: 5px 5px;
+      border-bottom: 1px solid #3A3A3A;
+  }
+
+  .date span{
+      background-color: #F44336;
+      color: #FFFFFF;
+      padding: 3px
+  }
+  /*fourth row style contact details*/
+  div#row4{
+      margin: auto;
+      width: 60%;
+      padding: 70px 0;
+  }
+  #row4 .std{
+      float: left;
+      width: 45%;
+      margin-left: 5%;
+  }
+  #row4 .container button{
+      float: right;
+      background-color: #000000;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 15px;
+      margin: 10px 0;
+  }
+  .container button:hover{
+      cursor: pointer;
+      background-color: #CBCBCB;
+      color: #000000;
+  }
+  /*footer style*/
+  .row6{
+      margin: auto;
+      width: 50%;
+      cursor: default;
+  }
+  .row6 i:hover{ opacity: 0.5;}
+
+
+
+  </style>
+</head>
+
+<body>
+ <!-- navigation bar -->
+ <div class="nav-bar">
+     <!--left-side navigation bar -->
+     <div class="leftbar" style="float: left">
+       <ul>
+           <li><a href="#row1">HOME</li></a>
+           <li><a href="#row2">BAND</li></a>
+           <li><a href="#row3">TOUR</li></a>
+           <li><a href="#row4">CONTACT</li></a>
+           <li class="dropdown">
+               <span class="dropbtn"><a href="#">MORE<i class="material-icons" style="font-size: 15px;">arrow_drop_down</i></a></span>
+               <div class="drop_content">
+                   <a href="#" style="color: #000000">Merchandise</a>
+                   <a href="#"  style="color: #000000">Media</a>
+                   <a href="#"  style="color: #000000">Extra</a>
+               </div>
+
+           </li>
+
+       </ul>
+     </div>
+     <!--right-side navigation bar -->
+     <div class="rightbar" style="float: right">
+         <ul>
+             <li><i class="material-icons" style="font-size: 15px;">search</i></li>
+         </ul>
+     </div>
+     <!--to clear the float of both right and left float -->
+     <div class="clear"></div>
+ </div>
+
+ <!--row 1-->
+ <div id="row1">
+     <div class="cont">
+         <img src="chicago.jpg" alt="chicago" width="100%" />
+         <div class="bottomimage">
+             <h2 style="text-align: center">Chicago</h2>
+             <h4>Thank you, Chicago-A night we won't forget.</h4>
+         </div>
+     </div>
+ </div>
+
+  <!--row 2-->
+  <div id="row2">
+      <!--d text in the band-->
+      <br>
+      <div>
+          <h1 style="text-align: center; margin-top: 70px;">THE BAND</h1>
+          <p style="text-align: center;"><i>We love music</i></p>
+          <p>We have created a fictional band website. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do
+           eiusmod tempor incididunt ut labore et dolore magna
+           aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+             nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+      <!--d band images-->
+      <div class="bandmembers" style="width: 100%">
+          <div>
+              <p>Name</p>
+              <img src="bandmember.jpg" alt="" width="60%" style="border-radius: 5px" />
+          </div>
+          <div>
+              <p>Name</p>
+              <img src="bandmember.jpg" alt="" width="60%" style="border-radius: 5px" />
+          </div>
+          <div>
+              <p>Name</p>
+              <img src="bandmember.jpg" alt="" width="60%" style="border-radius: 5px" />
+          </div>
+      </div>
+      <div class="clear"></div>
+  </div>
+
+  <!--tour section-->
+  <div id="row3">
+      <div class="tour"><!--for centering-->
+          <div style="text-align: center;">
+              <h1>TOUR DATE</h1>
+              <i>Remember to book your tickets!</i>
+          </div>
+          <div class="date" style="margin-top: 40px; margin-bottom: 30px"><!--show date-->
+              <p>September <span>Sold out</span></p>
+              <p>October <span>Sold out</span></p>
+              <p>November</p>
+          </div>
+          <div style="width: 100%;"><!--for floating newyork paris sanf-->
+              <div class="city" style="margin-right: 15px">
+                  <img src="newyork.jpg" alt="new york" width="100%"/>
+                  <div style="padding: 0 0 15px 15px">
+                      <p><b>New York</b></p>
+                      <p>Fri 27 Nov 2016</p>
+                      <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                      <button class="btn">Buy Tickets</button>
+                  </div>
+
+              </div>
+              <div class="city" style="margin-right: 15px">
+                  <img src="paris.jpg" alt="paris" width="100%"/>
+                  <div  style="padding: 0 0 15px 15px">
+                      <p><b>Paris</b></p>
+                      <p>Sat 28 Nov 2016</p>
+                      <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                      <button class="btn">Buy Tickets</button>
+                  </div>
+              </div>
+              <div class="city">
+                  <img src="sanfran.jpg" alt="san francisco" width="100%" />
+                  <div  style="padding: 0 0 15px 15px">
+                      <p><b>San Francisco</b></p>
+                      <p>Sun 29 Nov 2016</p>
+                      <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                      <button class="btn">Buy Tickets</button>
+                  </div>
+              </div>
+              <div style="clear: both"></div>
+          </div>
+      </div>
+  </div>
+
+  <!--Contact-->
+  <div id="row4">
+      <div class="container">
+          <div style="text-align: center">
+              <h2>CONTACT</h2>
+              <i>Fan? Drop a note!</i>
+          </div>
+          <div style="padding: 50px 0px;"><!--4 d contact details and text input-->
+               <div style="float: left; width: 50%">
+                   <i class="material-icons" style="font-size: 17px">location_on</i><span style="font-size: 17px; margin-left: 20px">Chicago, US</span><br>
+                   <i class="material-icons" style="font-size: 17px">call</i><span style="font-size: 17px; margin-left: 20px">Phone: +00 151515</span><br>
+                   <i class="material-icons" style="font-size: 17px">email</i><span style="font-size: 17px; margin-left: 20px">Email: mail@mail.com</span><br><br>
+               </div>
+               <div style="float: left; width: 50%">
+                  <form>
+                  <input type="text" class="std" placeholder="Name" style="padding: 8px 5px" />
+                  <input type="text" class="std" placeholder="Email" style="padding: 8px 5px" /><br>
+                  <input type="text" placeholder="Message" style="padding: 8px 5px; width: 95%; margin: 10px 0 0 5%;" /><br>
+                  <button>SEND</button>
+
+                  </form>
+                  <div style="clear: both"></div>
+
+               </div>
+          </div>
+          <div style=" clear: both"></div>
+
+      </div>
+
+  </div>
+
+  <!-- Image of location/map -->
+  <div class="row5">
+      <img src="map.jpg" alt="location map" width="100%" />
+  </div>
+
+  <!-- footer -->
+  <div class="row6">
+      <div class="footer" style="margin: 70px 0; text-align: center">
+          <i class="material-icons">facebook</i>
+          <i class="material-icons">facebook</i>
+          <i class="material-icons">facebook</i>
+          <i class="material-icons">facebook</i>
+          <i class="material-icons">facebook</i>
+          <i class="material-icons">facebook</i>
+          <p style="color: #8E8E8E;">Powered by <a href="#" style="color: #8E8E8E">omobolaji</a></p>
+      </div>
+
+
+  </div>
+</body>
+
+</html>
