@@ -5,9 +5,11 @@
 <head>
   <title>FASHION</title>
   <script src="https://kit.fontawesome.com/34090bf3d6.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-         body{ box-sizing: border-box;
-               margin: 0;
+          *{ box-sizing: border-box; }
+
+          body{ margin: 0;
                padding: 0;
                font-family: Arial, Helvetica, sans-serif;}
 
@@ -24,14 +26,18 @@
              border-radius: 5px;
              color: white;
              background: black;
-             cursor: pointer;
-         }
+             cursor: pointer;  }
 
          .left-nav-bar{ float: left;
-         padding-top: 5px; }
+                 padding-top: 5px;
+          }
+          .left-nav-bar a{
+              color: black;
+              text-decoration: none;
+          }
 
 
-         .nav-bar, .row-three, .row-five{
+         .nav-bar, .row-three, .row-five, .row-six, .footer-content{
              margin: 0 40px;}
 
          .nav-bar::after{
@@ -45,37 +51,48 @@
          li a{ text-decoration: none;
                color: black;}
 
-         /*style for the content*/
+
+         /*style for the content */
 
         /*flex container for all*/
-         .row-one, .row-two, .image-card-three, .row-four, .image-card-five, footer{
+         .row-one, .row-two, .image-card-three, .row-four, .image-card-five, .image-card-six, .footer-content{
              display: flex;
-             flex-direction: row;}
+             flex-flow: row wrap;
+             justify-content: space-between;
+            }
+
 
          /*style for row one*/
          .row-one{  background: #f4f6f5;
                     margin: 0 40px 20px 40px;
                     border: 1px;
                     border-radius: 30px;
-                    padding: 0 40px;}
+                    padding: 0 40px;   }
+
 
          /*flex row one equally*/
-         .row-one > div{ flex: 50%;
+         .row-one > div{ width: 48%;
                          padding: 20px;}
 
+         /*style for row three*/
+
         /*style the three image cards in row 3 equally */
-
-
          .image-card-three img{
              border: 1px;
              border-radius: 10px;
              height: 350px;
-         }
+             width: 100%;
+             object-fit: contain;
+            }
+
          /*flex the div equally*/
          .image-card-three > div{
-             margin: 10px 40px 0 0;
-             flex: 33.33333%
-         }
+              width:30%;
+             }
+
+
+
+
 
          .row-four button{
              padding: 15px 35px;
@@ -89,27 +106,38 @@
 
          /*flex the div element in row 4 equally*/
          .row-four > div{
-             flex: 50%;
+             width:50%;
+             height: inherit;
          }
 
          .image-card-five > div{
-             flex: 50%;
-             margin: 10px 20px 0 0;}
+                 width: 48%;
+             }
+
+          .image-card-five img{
+              height: 300px;
+              border-radius: 5px;
+              border: solid 1px orange;
+              width: 100%;
+              object-fit: contain;
+          }
+
+          .image-card-six > div{
+                 width: 48%;
+             }
 
 
 
+         img{ }
 
 
-         img{   width: 100%;
-                height: auto; }
-
-         .row-six{
+         .row-seven{
              background: #e4c444;
              color: white;
              text-align: center;
              padding: 40px 0;}
 
-         .row-six button{  padding: 5px 15px;
+         .row-seven button{  padding: 5px 15px;
              font-size: 10px;
              border: 1px;
              border-radius: 5px;
@@ -119,7 +147,7 @@
 
 
          footer{ color: white;
-                padding: 50px 40px;
+
          background: black; }
 
          footer h5 a{ text-decoration: none; color: white; }
@@ -142,6 +170,13 @@
              clip-path: polygon(0% 2%, 98% 0%, 100% 98%, 2% 100%);
          }
 
+         .right-nav-bar li:hover a, .left-nav-bar h3:hover a{
+             color: #b9b9bb;
+         }
+          button:hover{
+              background: #b9b9bb;
+          }
+
 
 
   </style>
@@ -151,7 +186,7 @@
    <!--Navigation bar-->
    <div class="nav-bar">
        <div class="left-nav-bar">
-           <h3><a style="color: black; text-decoration: none;" href="#">FASHION</a></h3>
+           <h3><a href="#">FASHION</a></h3>
        </div>
        <div class="right-nav-bar">
            <ul>
@@ -168,82 +203,91 @@
    <!--Content-->
    <div class="content">
        <div class="row-one"> <!--row one-->
-           <div> <!--left-->
-               <div class="unique" style="background: white;">
-                   <h1 style="padding-top: 5px;">LET'S</h1>
+           <div style="padding-bottom: 20px; border: solid 1px yellow; "> <!--left-->
+               <div class="unique" style="background: white; margin-left: -15px">
+                   <h1 style="padding-top: 5px">LET'S</h1>
                </div>
                <h1>EXPLORE</h1>
-               <div class="unique" style="background: #ebd96b;">
+               <div class="unique" style="background: #ebd96b; margin-left: -15px">
                    <h1 style="padding-top: 5px;">UNIQUE</h1>
                </div>
                <h1>CLOTHES.</h1>
                <p>Live for influential and innovative fashion!</p>
                <button>Shop Now</button>
            </div>
-           <div><img src="media/happy.png" alt="a girl"></div> <!--right-->
+            <!--right-->
+           <div style="margin: 0; padding-bottom: 0; border: solid 1px green;">
+               <img src="media/happy.png" alt="a girl" style="width: 100%; object-fit: contain;">
+           </div>
        </div>
 
        <div class="row-two"> <!--row two-->
-           <img src="media/Brands.png" alt="brand image">
+           <img width="100%" src="media/Brands.png" alt="brand image">
        </div>
 
        <div class="row-three" style="padding-bottom: 70px;"> <!--row three-->
            <h3 style="display: inline-block;">NEW ARRIVALS</h3>
            <div class="image-card-three">
-               <div>
+               <div style="border: solid 1px green;">
                    <img style="background: #b9b9bb;" src="media/Rectangle_20-removebg-preview.png" alt="">
                    <br><br><b>Hoodies & Sweetshirts</b><br><small>Explore Now!</small>
                </div>
-               <div>
+               <div style="border: solid 1px red;">
                    <img style="background: #7e629d;" src="media/Rectangle_21-removebg-preview.png" alt="">
                    <br><br><b>Coats & Parkas</b><br><small>Explore Now!</small>
                </div>
-               <div>
+               <div style="border: solid 1px yellow;">
                    <img style="background: #68c8c7" src="media/Rectangle_22-removebg-preview.png" alt="">
                    <br><br><b>Tees & T-Shirts</b><br><small>Explore Now!</small>
                </div>
            </div>
        </div>
 
-       <div class="row-four" style="background: #ebd96b">  <!--row four-->
-           <div><img src="media/image_12-removebg-preview.png" alt=""></div>
-           <div style="margin: 40px 0 0 60px;">
+       <div class="row-four" style="background: #e4c444; height: 400px; border: solid 2px black;">  <!--row four-->
+           <div style="border: solid 1px green; margin-bottom: -5px;">
+               <img style="border: solid 1px blue; width: 100%; height: 100%; object-fit: contain;" src="media/image_12-removebg-preview.png" alt="">
+           </div>
+           <div style=" border: solid 1px red; padding: 30px 0 0 70px;">
                <div class="unique" style="background: white; margin-left: -10px; padding-right: 10px;"><h1>PAYDAY</h1></div>
                <h1>SALE NOW</h1>
                <p>Spend minimal $100 get 30% off<br>voucher code for your next purchase</p>
-                <b>1 june-10 june 2021</b><br>*Terms & conditions apply<br><br>
+               <b>1 june-10 june 2021</b><br>*Terms & conditions apply<br><br>
                <button>Shop Now</button>
            </div>
        </div>
 
        <div class="row-five" style="padding-top: 40px;"> <!--row five-->
            <h3 style="display: inline-block;">Young's Favourite</h3>
-           <div class="image-card-five">
-               <div class="column1">
-                   <div>
-                       <img style="background: #e9c7ae; border: 1px; border-radius: 5px;" src="media/Rectangle_50-removebg-preview.png" alt="">
-                       <br><br><b>Trending on instagram</b><br><small>Explore Now!</small>
-                   </div>
-                    <div style="margin: 150px 20px;">
-                        <h3>DOWNLOAD APP &<br> GET THE VOUCHER!</h3>
-                        <P>Get 30% off for first transaction using<br>Rondovision mobile app for now</P>
-                        <i class="fa-brands fa-apple"></i>
-                        <i class="fa-brands fa-google-play"></i>
-                    </div>
+
+           <div class="image-card-five" style="border: solid 2px green;">
+               <div style="border: solid 1px yellow;">
+                   <img style="background: #e9c7ae;" src="media/Rectangle_50-removebg-preview.png" alt="">
+                   <br><br><b>Trending on instagram</b><br><small>Explore Now!</small>
                </div>
-               <div class="column2">
-                   <div>
-                       <img style="background: #e5b3ab; border: 1px; border-radius: 5px;" src="media/Rectangle_49-removebg-preview.png" alt="">
-                       <br><br><b>All under $40</b><br><small>Explore Now!</small>
-                   </div>
-                   <div>
-                       <img src="media/mobile.png" alt="" />
-                   </div>
+               <div style="border: solid 1px blue;">
+                   <img style="background: #e5b3ab;" src="media/Rectangle_49-removebg-preview.png" alt="">
+                   <br><br><b>All under $40</b><br><small>Explore Now!</small>
                </div>
            </div>
        </div>
 
-       <div class="row-six"> <!--row six-->
+       <div class="row-six">
+           <div class="image-card-six" style="border: solid 2px red;">
+              <div style="border: solid 1px black">
+                  <div style="margin: auto; width: 70%; padding: 100px 0;">
+                      <h3>DOWNLOAD APP &<br> GET THE VOUCHER!</h3>
+                      <P>Get 30% off for first transaction using<br>Rondovision mobile app for now</P>
+                      <i class="fa-brands fa-apple"></i>
+                      <i class="fa-brands fa-google-play"></i>
+                  </div>
+              </div>
+              <div style="border: solid 1px blue;">
+                  <img src="media/mobile.png" alt="" style="border: solid 1px green; height: 400px; width: 100%; object-fit: contain;"/>
+              </div>
+           </div>
+       </div>
+
+       <div class="row-seven"> <!--row six-->
            <h2>JOIN SHOPPING COMMUNITY TO<br>GET MONTHLY PROMO</h2>
            <p>Type your email down below and be young wild generation</p>
            <form style="background: white; width: fit-content; margin: auto; border: 1px; border-radius: 5px; padding: 2px;">
@@ -255,27 +299,29 @@
 
    <!--footer-->
    <footer>
-       <div style="flex: 50%;"> <!--left-->
-           <h3>FASHION</h3>
-           <small>Complete your style with awesome<br>clothes from us.</small><br><br>
-           <i class="fa-brands fa-facebook-f fa-sm"></i>
-           <i class="fa-brands fa-instagram fa-sm"></i>
-           <i class="fa-brands fa-twitter fa-sm"></i>
-           <i class="fa-brands fa-linkedin-in fa-sm"></i>
-       </div>
-       <div style="flex: 16.67%;">
+       <div class="footer-content"  style="border: solid 2px green; padding: 30px 0;">
+          <div style="border: solid 1px yellow; width: 50%;"> <!--left-->
+             <h3>FASHION</h3>
+             <small>Complete your style with awesome<br>clothes from us.</small><br><br>
+             <i class="fa-brands fa-facebook-f fa-sm"></i>
+             <i class="fa-brands fa-instagram fa-sm"></i>
+             <i class="fa-brands fa-twitter fa-sm"></i>
+             <i class="fa-brands fa-linkedin-in fa-sm"></i>
+         </div>
+         <div style="border: solid 1px red;">
            <h5><a href="#">Company</a></h5>
            <small><a href="#">About</a><br><br><a href="#">contact us</a><br><br><a href="#">Support</a><br><br><a href="#">Careers</a></small>
 
-       </div>
-       <div style="flex: 16.67%;">
+         </div>
+         <div  style="border: solid 1px green;">
            <h5><a href="#">Quick Link</a></h5>
            <small><a href="#">Share Location</a><br><br><a href="#">Orders Tracking</a><br><br><a href="#">Size Guide</a><br>
            <br><a href="#">FAQs</a></small>
-       </div>
-       <div style="flex: 16.67%;">
+         </div>
+         <div  style="border: solid 1px blue;">
            <h5><a href="#">Legal</a></h5>
            <small><a href="#">Terms & Conditions</a><br><br><a href="#">Privacy Policy</a></small>
+         </div>
        </div>
    </footer>
 </body>
